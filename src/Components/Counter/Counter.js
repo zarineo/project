@@ -3,13 +3,17 @@ import { useState } from 'react';
 
 const Counter = () => {
     const [number, setNumber] = useState(0); //здесь мы создали состояние - state
+
     const minuscounter = () => {
         setNumber(number - 1);
     }
+
     const pluscounter = () => {
         setNumber(number + 1);
     }
+    
     return <div className = "counter">
+        <h2> Счетчик </h2>
         <div className="counter__input">
             <input className="input" value = {number}/>
         </div>

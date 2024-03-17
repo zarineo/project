@@ -1,0 +1,20 @@
+.change-color {
+    background: linear-gradient(#deede0, #3e7a18);
+    width: 180px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-family: 'Courier New', Courier;
+    font-weight: bold;
+    cursor: progress;
+}
+
+.change-color:hover {
+    box-shadow: #888 5px 3px 8px;
+}
+.change-color:active {
+    box-shadow: rgb(31, 103, 67) 2px 2px 2px;
+}

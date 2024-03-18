@@ -7,15 +7,18 @@ const Converter = () => {
   const [farengate, setFarengate] = useState("");
   const changeFarengate = (e) => {
     setGradus(e.target.value);
-    setFarengate((gradus * 9) / 5 + 32);
-    console.log(gradus, farengate);
+    setFarengate((e.target.value * 9) / 5 + 32);
+  };
+  const changeGradus = (e) => {
+    setFarengate(e.target.value);
+    setGradus((5 / 9) * (e.target.value - 32));
   };
 
-  useEffect(() => {
-    if (gradus !== "") {
-      setFarengate((gradus * 9) / 5 + 32);
-    }
-  }, [gradus]);
+  // useEffect(() => {
+  //   if (gradus !== "") {
+  //     setFarengate((gradus * 9) / 5 + 32);
+  //   }
+  // }, [gradus]);
 
   return (
     <div className="converter">
@@ -36,9 +39,7 @@ const Converter = () => {
           placeholder="0"
           className="input"
           value={farengate}
-          onChange={(e) => {
-            setFarengate(e.target.value);
-          }}
+          onChange={changeGradus}
         />
       </div>
     </div>
